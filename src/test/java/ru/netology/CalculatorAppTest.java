@@ -1,5 +1,8 @@
+package ru.netology;
+
 import org.junit.jupiter.api.*;
 
+import static ru.netology.CalculatorApp.*;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class CalculatorAppTest {
@@ -115,12 +118,11 @@ public class CalculatorAppTest {
         double argumentMonthlyPayment = 664.29;
         double argumentOverpayment = 3914.44;
         double argumentTotalRefundAmount = 23914.44;
-        String expected = "Результаты расчетов кредитного калькулятора: " +
+        String expected = "Результаты расчетов кредитного калькулятора: \n" +
                 "Ежемесячный платеж: 664.29 р. Переплата за весь период: 3914.44 р. Общая сумма к возврату в банк: 23914.44 р.";
         String result = addToString(argumentMonthlyPayment, argumentOverpayment, argumentTotalRefundAmount);
         Assertions.assertEquals(expected, result);
     }
-
 
 
 }
